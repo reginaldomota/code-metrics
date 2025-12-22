@@ -1,1 +1,1 @@
-# code-metrics
+Este projeto integra o trabalho de monografia de Ingrid Batista e consiste no desenvolvimento de ferramentas em C#, sem o uso de inteligência artificial, para gerar soluções de referência baseadas em boas práticas de programação. Esses códigos servirão como base comparativa para avaliação de códigos gerados por LLMs usando as métricas BLEU e ROUGE.
