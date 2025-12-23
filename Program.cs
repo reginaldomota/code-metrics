@@ -18,19 +18,7 @@ public class Program
 
             if (option == "1")
             {
-                Console.Write("Digite o primeiro array (separado por vírgula): ");
-                string input = Console.ReadLine() ?? "";
-                int[] a = Utils.ParseArray(input);
-
-                Console.Write("Digite o segundo array (separado por vírgula): ");
-                input = Console.ReadLine() ?? "";
-                int[] b = Utils.ParseArray(input);
-
-                int[] result = SetOperations.Difference(a, b);
-
-                Console.WriteLine($"\nArray A: [{string.Join(", ", a)}]");
-                Console.WriteLine($"Array B: [{string.Join(", ", b)}]");
-                Console.WriteLine($"Diferença (A - B): [{string.Join(", ", result)}]");
+                SetOperations.Execute();
             }
             else if (option == "2")
             {
