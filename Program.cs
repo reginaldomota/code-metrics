@@ -1,4 +1,6 @@
-﻿namespace CodeMetrics;
+﻿using Application.CodeMetrics;
+
+namespace CodeMetrics;
 
 public class Program
 {

@@ -1,4 +1,4 @@
-namespace CodeMetrics;
+namespace Application.CodeMetrics;
 
 public class SetOperations
 {
