@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Application.CodeMetrics;
+using Application.Operations;
 
 namespace CodeMetrics;
 

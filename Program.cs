@@ -1,4 +1,5 @@
 ﻿using Application.CodeMetrics;
+using Application.Operations;
 using Application.Sequence.StopConditions;
 using Application.Sequence.Factories;
 using Microsoft.Extensions.DependencyInjection;
