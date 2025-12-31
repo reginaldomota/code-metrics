@@ -28,7 +28,8 @@ public class CompareSequence
 
         List<Fraction> result = GetFractionsGreaterThanHalfOfA(sequenceDouble, sequenceFraction);
 
-        Console.WriteLine($"\n{SequenceMessages.Separator}");
+        Console.WriteLine($"\n");
+        Console.WriteLine(SequenceMessages.Separator);
         Console.WriteLine(SequenceMessages.ResultTitle);
         Console.WriteLine(SequenceMessages.Separator);
 
