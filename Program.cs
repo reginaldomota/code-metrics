@@ -4,6 +4,7 @@ using Application.Sequence.StopConditions;
 using Application.Sequence.Factories;
 using Microsoft.Extensions.DependencyInjection;
 using Application.Sequence.Types;
+using Presentation;
 
 namespace CodeMetrics;
 
@@ -13,7 +14,7 @@ public class Program
     {
         var serviceProvider = ConfigureServices();
 
-        var app = new Application(serviceProvider);
+        var app = new ConsoleApplication(serviceProvider);
         app.Run();
     }
 

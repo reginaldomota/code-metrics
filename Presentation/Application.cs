@@ -2,13 +2,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Application.CodeMetrics;
 using Application.Operations;
 
-namespace CodeMetrics;
+namespace Presentation;
 
-public class Application
+public class ConsoleApplication
 {
     private readonly IServiceProvider _serviceProvider;
 
-    public Application(IServiceProvider serviceProvider)
+    public ConsoleApplication(IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider;
     }
