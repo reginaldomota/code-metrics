@@ -41,7 +41,7 @@ namespace Presentation.Resources
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Presentation.Resources.PresentationMessages", typeof(PresentationMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("code_metrics.Presentation.Resources.PresentationMessages", typeof(PresentationMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
