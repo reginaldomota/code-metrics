@@ -1,4 +1,6 @@
-namespace Application.CodeMetrics;
+namespace Application.Operations;
+
+using Application.Operations.Utils;
 
 public class SetOperations
 {
@@ -6,12 +8,11 @@ public class SetOperations
     {
         Console.Write("Digite o primeiro array (separado por vírgula): ");
         string input = Console.ReadLine() ?? "";
-        int[] a = Utils.ParseArray(input);
+        int[] a = Parser.ParseArray(input);
 
         Console.Write("Digite o segundo array (separado por vírgula): ");
         input = Console.ReadLine() ?? "";
-        int[] b = Utils.ParseArray(input);
-
+        int[] b = Parser.ParseArray(input);
         int[] result = Difference(a, b);
 
         Console.WriteLine($"\nArray A: [{string.Join(", ", a)}]");
