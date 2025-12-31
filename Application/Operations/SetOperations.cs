@@ -20,7 +20,7 @@ public class SetOperations
         Console.WriteLine($"Diferença (A - B): [{string.Join(", ", result)}]");
     }
 
-    public int[] Difference(int[] a, int[] b)
+    private int[] Difference(int[] a, int[] b)
     {
         HashSet<int> setB = new HashSet<int>(b);
         List<int> result = new List<int>();
