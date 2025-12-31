@@ -26,8 +26,8 @@ public class Program
     {
         var services = new ServiceCollection();
 
-        services.AddKeyedTransient<IStopCondition<double>, DoubleStop>("double");
-        services.AddKeyedTransient<IStopCondition<Fraction>, StopOnNegativeFraction>("fraction");
+        services.AddKeyedTransient<IStopCondition<double>, DoubleStop>(ServiceKeys.DoubleStopCondition);
+        services.AddKeyedTransient<IStopCondition<Fraction>, StopOnNegativeFraction>(ServiceKeys.FractionStopCondition);
         services.AddSingleton<IStopConditionFactory, StopConditionFactory>();
 
         services.AddTransient<IMatrixString, MatrixString>();
