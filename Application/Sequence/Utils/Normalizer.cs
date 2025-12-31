@@ -1,6 +1,6 @@
 namespace Application.Sequence.Utils;
 
-public static class Utils
+public static class Normalizer
 {
     public static string NormalizeInput(this string value)
     {

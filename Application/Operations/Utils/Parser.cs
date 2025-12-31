@@ -1,4 +1,6 @@
-public static class Utils
+namespace Application.Operations.Utils;
+
+public static class Parser
 {
     public static int[] ParseArray(string input)
     {
