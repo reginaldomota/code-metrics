@@ -2,7 +2,7 @@ namespace Application.CodeMetrics;
 
 public class SetOperations
 {
-    public static void Execute()
+    public void Execute()
     {
         Console.Write("Digite o primeiro array (separado por vírgula): ");
         string input = Console.ReadLine() ?? "";
@@ -19,13 +19,13 @@ public class SetOperations
         Console.WriteLine($"Diferença (A - B): [{string.Join(", ", result)}]");
     }
 
-    public static int[] Difference(int[] a, int[] b)
+    public int[] Difference(int[] a, int[] b)
     {
         HashSet<int> setB = new HashSet<int>(b);
         List<int> result = new List<int>();
-        
+
         foreach (int item in a)
-            if(!setB.Contains(item))
+            if (!setB.Contains(item))
                 result.Add(item);
 
         return result.ToArray();
