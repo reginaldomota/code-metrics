@@ -34,7 +34,8 @@ public class Program
         services.AddTransient<IMatrixStringFactory>(sp =>
             new MatrixStringFactory((rows, columns, value) => new MatrixString(rows, columns, value)));
 
-        services.AddTransient<SetOperations>();
+        services.AddTransient<ISetOperations, SetOperations>();
+        services.AddTransient<IConsoleSetOperations, ConsoleSetOperations>();
         services.AddTransient<CompareSequence>();
         services.AddTransient<ConsoleMatrix>();
 

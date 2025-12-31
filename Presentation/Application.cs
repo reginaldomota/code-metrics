@@ -4,6 +4,7 @@ using Application.Operations;
 using Application.Matrix;
 using Presentation.Resources;
 using Domain.Enums;
+using Domain.Interfaces;
 
 namespace Presentation;
 
@@ -36,8 +37,8 @@ public class ConsoleApplication
                 switch (menuOption)
                 {
                     case MenuOption.Option1:
-                        var setOperations = _serviceProvider.GetRequiredService<SetOperations>();
-                        setOperations.Execute();
+                        var consoleSetOperations = _serviceProvider.GetRequiredService<IConsoleSetOperations>();
+                        consoleSetOperations.Execute();
                         break;
                     case MenuOption.Option2:
                         var compareSequence = _serviceProvider.GetRequiredService<CompareSequence>();
