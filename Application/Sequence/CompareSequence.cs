@@ -7,7 +7,7 @@ using Application.Sequence.Types;
 using Application.Sequence.Utils;
 using Domain.Interfaces;
 
-public class CompareSequence : ICompareSequence
+public class CompareSequence : IConsole
 {
     private readonly IStopConditionFactory _stopConditionFactory;
 

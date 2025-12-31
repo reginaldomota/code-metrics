@@ -6,7 +6,7 @@ using Domain.Enums;
 
 namespace Application.Matrix;
 
-public class ConsoleMatrix : IConsoleMatrix
+public class ConsoleMatrix : IConsole
 {
     private IMatrixString? _matrix;
     private readonly IMatrixStringFactory _matrixFactory;

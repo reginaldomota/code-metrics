@@ -4,7 +4,7 @@ using Domain.Interfaces;
 
 namespace Application.Operations;
 
-public class ConsoleSetOperations : IConsoleSetOperations
+public class ConsoleSetOperations : IConsole
 {
     private readonly ISetOperations _setOperations;
 

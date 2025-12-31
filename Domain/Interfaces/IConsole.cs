@@ -1,6 +1,6 @@
 namespace Domain.Interfaces;
 
-public interface IConsoleSetOperations
+public interface IConsole
 {
     void Execute();
 }
