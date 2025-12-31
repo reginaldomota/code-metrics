@@ -6,6 +6,7 @@ using Presentation.Resources;
 using Domain.Enums;
 using Domain.Interfaces;
 using Domain.Constants;
+using Presentation.Utils;
 
 namespace Presentation;
 
@@ -30,7 +31,7 @@ public class ConsoleApplication
             Console.WriteLine(PresentationMessages.MenuOption4);
             Console.Write(PresentationMessages.ChooseOption);
 
-            string option = Console.ReadLine() ?? "";
+            string? option = Console.ReadLine().NormalizeInput();
 
             if (int.TryParse(option, out int optionNumber) && Enum.IsDefined(typeof(MenuOption), optionNumber))
             {
