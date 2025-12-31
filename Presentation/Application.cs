@@ -45,7 +45,7 @@ public class ConsoleApplication
                         compareSequence.Execute();
                         break;
                     case MenuOption.Option3:
-                        var consoleMatrix = _serviceProvider.GetRequiredService<ConsoleMatrix>();
+                        var consoleMatrix = _serviceProvider.GetRequiredService<IConsoleMatrix>();
                         consoleMatrix.Execute();
                         break;
                     case MenuOption.Option4:
