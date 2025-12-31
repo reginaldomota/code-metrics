@@ -41,7 +41,7 @@ namespace Application.Operations.Resources
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Application.Operations.Resources.SetOperationsMessages", typeof(SetOperationsMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("code_metrics.Application.Operations.Resources.SetOperationsMessages", typeof(SetOperationsMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

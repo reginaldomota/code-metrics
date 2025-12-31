@@ -41,7 +41,7 @@ namespace Application.Matrix.Resources
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Application.Matrix.Resources.MatrixMessages", typeof(MatrixMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("code_metrics.Application.Matrix.Resources.MatrixMessages", typeof(MatrixMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
