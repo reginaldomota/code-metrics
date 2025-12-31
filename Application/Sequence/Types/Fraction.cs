@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace Application.CodeMetrics;
+namespace Application.Sequence.Types;
 
 public class Fraction : IParsable<Fraction>
 {

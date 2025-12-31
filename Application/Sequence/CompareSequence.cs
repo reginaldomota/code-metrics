@@ -3,6 +3,7 @@ namespace Application.CodeMetrics;
 using System.Globalization;
 using Application.Sequence.Factories;
 using Application.Sequence.Resources;
+using Application.Sequence.Types;
 using Application.Sequence.Utils;
 
 public class CompareSequence

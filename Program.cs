@@ -3,6 +3,7 @@ using Application.Operations;
 using Application.Sequence.StopConditions;
 using Application.Sequence.Factories;
 using Microsoft.Extensions.DependencyInjection;
+using Application.Sequence.Types;
 
 namespace CodeMetrics;
 

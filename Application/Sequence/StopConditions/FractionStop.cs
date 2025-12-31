@@ -1,4 +1,4 @@
-using Application.CodeMetrics;
+using Application.Sequence.Types;
 
 namespace Application.Sequence.StopConditions;
 
