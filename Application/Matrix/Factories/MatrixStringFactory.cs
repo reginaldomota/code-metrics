@@ -4,8 +4,15 @@ namespace Application.Matrix.Factories;
 
 public class MatrixStringFactory : IMatrixStringFactory
 {
-    public IMatrixString Create(int rows, int columns, string value)
+    private readonly Func<int, int, string?, IMatrixString> _createFunc;
+
+    public MatrixStringFactory(Func<int, int, string?, IMatrixString> createFunc)
     {
-        return new MatrixString(rows, columns, value);
+        _createFunc = createFunc;
+    }
+
+    public IMatrixString Create(int rows, int columns, string? value)
+    {
+        return _createFunc(rows, columns, value);
     }
 }
