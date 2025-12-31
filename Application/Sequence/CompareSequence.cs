@@ -40,7 +40,7 @@ public class CompareSequence
         {
             foreach (var fraction in result)
 
-                Console.WriteLine($"{fraction} = {fraction.GetValue():F4}");
+                Console.WriteLine($"{fraction} = {fraction.GetValue():F2}");
         }
     }
 
