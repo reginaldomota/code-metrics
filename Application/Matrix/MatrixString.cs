@@ -1,4 +1,5 @@
 using Application.Matrix.Exceptions;
+using Application.Matrix.Resources;
 using Domain.Interfaces;
 
 namespace Application.Matrix;
@@ -7,10 +8,13 @@ public class MatrixString : IMatrixString
 {
     private string[,] m;
 
-    public MatrixString(int rows, int columns, string value)
+    public MatrixString(int rows, int columns, string? value)
     {
         if (rows <= 0 || columns <= 0)
-            throw new ArgumentException("O número de linhas e colunas deve ser maior que zero");
+            throw new ArgumentException(MatrixMessages.InvalidRowsColumns);
+
+        if (value == null)
+            throw new ArgumentException(MatrixMessages.InitialValueCannotBeNull);
 
         m = new string[rows, columns];
         for (int i = 0; i < rows; i++)
@@ -22,21 +26,24 @@ public class MatrixString : IMatrixString
         }
     }
 
-    public void Set(int row, int column, string value)
+    public void Set(int row, int column, string? value)
     {
         if (row < 0 || row >= m.GetLength(0) || column < 0 || column >= m.GetLength(1))
-            throw new MatrixException("Índices fora dos limites da matriz");
+            throw new MatrixException(MatrixMessages.IndexOutOfBounds);
+
+        if (value == null)
+            throw new MatrixException(MatrixMessages.ValueCannotBeNull);
 
         m[row, column] = value;
     }
 
-    public string RowToString(int index, string separator)
+    public string RowToString(int index, string? separator)
     {
         if (index < 0 || index >= m.GetLength(0))
-            throw new MatrixException("Índice da linha fora dos limites da matriz");
+            throw new MatrixException(MatrixMessages.RowIndexOutOfBounds);
 
         if (separator == null)
-            throw new MatrixException("Separador não pode ser nulo");
+            throw new MatrixException(MatrixMessages.SeparatorCannotBeNull);
 
         string[] rowElements = new string[m.GetLength(1)];
         for (int j = 0; j < m.GetLength(1); j++)
