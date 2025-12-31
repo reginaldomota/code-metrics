@@ -36,7 +36,7 @@ public class Program
 
         services.AddTransient<ISetOperations, SetOperations>();
         services.AddTransient<IConsoleSetOperations, ConsoleSetOperations>();
-        services.AddTransient<CompareSequence>();
+        services.AddTransient<ICompareSequence, CompareSequence>();
         services.AddTransient<ConsoleMatrix>();
 
         return services.BuildServiceProvider();

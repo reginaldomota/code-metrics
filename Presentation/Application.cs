@@ -41,7 +41,7 @@ public class ConsoleApplication
                         consoleSetOperations.Execute();
                         break;
                     case MenuOption.Option2:
-                        var compareSequence = _serviceProvider.GetRequiredService<CompareSequence>();
+                        var compareSequence = _serviceProvider.GetRequiredService<ICompareSequence>();
                         compareSequence.Execute();
                         break;
                     case MenuOption.Option3:

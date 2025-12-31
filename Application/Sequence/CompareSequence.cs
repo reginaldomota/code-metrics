@@ -5,8 +5,9 @@ using Application.Sequence.Factories;
 using Application.Sequence.Resources;
 using Application.Sequence.Types;
 using Application.Sequence.Utils;
+using Domain.Interfaces;
 
-public class CompareSequence
+public class CompareSequence : ICompareSequence
 {
     private readonly IStopConditionFactory _stopConditionFactory;
 
