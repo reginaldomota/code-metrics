@@ -4,7 +4,10 @@ using Application.Sequence.StopConditions;
 using Application.Sequence.Factories;
 using Microsoft.Extensions.DependencyInjection;
 using Application.Sequence.Types;
+using Application.Matrix;
+using Domain.Interfaces;
 using Presentation;
+using Application.Matrix.Factories;
 
 namespace CodeMetrics;
 
@@ -27,8 +30,13 @@ public class Program
 
         services.AddSingleton<IStopConditionFactory, StopConditionFactory>();
 
+        services.AddTransient<IMatrixString, MatrixString>();
+        services.AddTransient<IMatrixStringFactory>(sp =>
+            new MatrixStringFactory((rows, columns, value) => new MatrixString(rows, columns, value)));
+
         services.AddTransient<SetOperations>();
         services.AddTransient<CompareSequence>();
+        services.AddTransient<ConsoleMatrix>();
 
         return services.BuildServiceProvider();
     }

@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Application.CodeMetrics;
 using Application.Operations;
+using Application.Matrix;
 
 namespace Presentation;
 
@@ -21,7 +22,8 @@ public class ConsoleApplication
             Console.WriteLine(string.Concat("\n", new string('=', 50), "\nMenu Principal\n", new string('=', 50)));
             Console.WriteLine("1. Calcular diferença entre dois arrays");
             Console.WriteLine("2. Comparar sequências (A e B com frações)");
-            Console.WriteLine("3. Sair");
+            Console.WriteLine("3. Operações com Matriz de Strings");
+            Console.WriteLine("4. Sair");
             Console.Write("Escolha uma opção: ");
 
             string option = Console.ReadLine() ?? "";
@@ -37,6 +39,11 @@ public class ConsoleApplication
                 compareSequence.Execute();
             }
             else if (option == "3")
+            {
+                var consoleMatrix = _serviceProvider.GetRequiredService<ConsoleMatrix>();
+                consoleMatrix.Execute();
+            }
+            else if (option == "4")
             {
                 running = false;
                 Console.WriteLine("Até logo!");
